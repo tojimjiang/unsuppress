@@ -1,0 +1,26 @@
+{
+  "name": "unsuppress",
+  "version": "1.0.0",
+  "description": "Get to know the real quantity of goods available. 😉",
+  "permissions": [
+    "webRequest",
+    "*://*.ebay.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.ebay.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
